@@ -1,9 +1,3 @@
-// Barbu Angelo-Gabriel
-// Universitatea Politehnica Bucuresti
-// Facultatea de Automatica si Calculatoare
-// Lucrare de licenta - iulie 2023
-// Sistem blockchain pentru trasabilitatea și certificarea resurselor energetice
-
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
@@ -515,11 +509,11 @@ app.post('/emit-transaction', async (req, res) => {
             } catch (error) {
                 console.log(error)
             }
-        
+
         }
-        
+
         return res.redirect('/home')
-        
+
     })
 
     /* 

@@ -1,10 +1,15 @@
 import pyautogui
 import time
+import random
 
 while True:
-    time.sleep(15)
-    for line in open("fetch_stats.py", "r"):
+    for line in open("fetch_stats.js", "r"):
+        time.sleep(20)
         for word in line.split():
-            time.sleep(1.2)
-            pyautogui.typewrite(word)
+            for letter in word:
+                pyautogui.press(letter)
+                time.sleep(random.randint(1, 5)/10)
+            time.sleep(1)
+            pyautogui.leftClick()
+            pyautogui.press("space")
         pyautogui.press("enter")
